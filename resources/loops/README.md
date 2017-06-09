@@ -11,3 +11,6 @@ The init statement will often be a short variable declaration, and the variables
 The loop will stop iterating once the boolean condition evaluates to false.
 
 Note: There are no parentheses surrounding the three components of the for statement and the braces { } are always required.
+
+## It is important to note that For is Go's "while"
+while is spelled for in Go.
