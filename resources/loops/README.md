@@ -14,3 +14,10 @@ Note: There are no parentheses surrounding the three components of the for state
 
 ## It is important to note that For is Go's "while"
 while is spelled for in Go.
+
+If you omit the loop condition it loops forever, so an infinite loop is compactly expressed.
+
+    func infinite() {
+        for {
+        }
+    }
