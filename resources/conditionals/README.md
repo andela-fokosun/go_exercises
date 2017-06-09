@@ -13,3 +13,23 @@ Variables declared by the statement are only in scope until the end of the if.
 ## If and else
 
 Variables declared inside an if short statement are also available inside any of the else blocks.
+
+## Switch
+
+A case body breaks automatically, unless it ends with a fallthrough statement.
+Switch cases evaluate cases from top to bottom, stopping when a case succeeds.
+
+For example,
+
+    switch i {
+        case 0:
+        case f():
+    }
+
+does not call f if i==0.
+
+## Switch with no condition
+
+Switch without a condition is the same as switch true.
+
+This construct can be a clean way to write long if-then-else chains.

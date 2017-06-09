@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"math"
+	"runtime"
+	"time"
 )
 
 func main() {
@@ -15,6 +17,8 @@ func main() {
 		powR(3, 2, 10),
 		powR(3, 3, 20),
 	)
+	fmt.Println(switchStmt())
+	fmt.Println(switchWithNoCondition())
 }
 
 // Go's if statements need not be surrounded by parentheses ( )
@@ -42,4 +46,31 @@ func powR(x, n, lim float64) float64 {
 	}
 	// can't use v here, though
 	return lim
+}
+
+func switchStmt() string {
+	fmt.Print("Go runs on ")
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		return "OS X."
+	case "linux":
+		return "Linux."
+	default:
+		// freebsd, openbsd,
+		// plan9, windows...
+		return os
+	}
+}
+
+// switch with no condition
+func switchWithNoCondition() string {
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		return "Good morning!"
+	case t.Hour() < 17:
+		return "Good afternoon."
+	default:
+		return "Good evening."
+	}
 }
