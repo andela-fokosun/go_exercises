@@ -9,3 +9,7 @@ Like for, the if statement can start with a short statement to execute before th
 Variables declared by the statement are only in scope until the end of the if.
 
 (Try using v in the last return statement.)
+
+## If and else
+
+Variables declared inside an if short statement are also available inside any of the else blocks.
