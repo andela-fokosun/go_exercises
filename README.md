@@ -1,4 +1,4 @@
-![Image of Yaktocat](resources/godog.png)
+![Image of Yaktocat](resources/banner.png)
 ## go_exercises
 
 This is just a collection of sample go codes. Each of the folders is a collection of exercises. Feel free to fork this repo for your use.
